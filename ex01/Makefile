@@ -2,13 +2,16 @@ NAME = Fixed
 
 SRCS = main.cpp Fixed.cpp
 OBJS = $(SRCS:.cpp=.o)
-CXX = clang++
+CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
 	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
+
+%.o: %.cpp
+	$(CXX) $(CXXFLAGS) -c $< -o $(<:.cpp=.o)
 
 clean:
 	rm -f $(OBJS)

@@ -1,5 +1,4 @@
-#ifndef FIXED_HPP
-# define FIXED_HPP
+#pragma once
 
 #include <iostream>
 
@@ -16,5 +15,3 @@ private:
     int fixedpointnbr;
     static const int fractionalbits = 8;
 };
-
-#endif
